@@ -25,7 +25,7 @@ public class ReStoreTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка раздело главной страницы")
+    @DisplayName("Проверка разделов главной страницы")
     @Tag("smoke")
     @Owner("PuchkanevRostislav")
     void HomePageTest() {
@@ -85,7 +85,7 @@ public class ReStoreTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка добавление товара в избранное")
+    @DisplayName("Тест добавления товара в избранное")
     @Tag("smoke")
     @Owner("PuchkanevRostislav")
     void addToFavoritesTest() {
