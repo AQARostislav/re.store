@@ -14,7 +14,7 @@ public class ReStoreTests extends TestBase {
 
     @Test
     @DisplayName("Проверка выбора региона")
-    @Tag("smoke")
+    @Tag("regression")
     @Owner("PuchkanevRostislav")
     void RegionTest() {
         page.openHome()
@@ -28,7 +28,7 @@ public class ReStoreTests extends TestBase {
 
     @Test
     @DisplayName("Проверка разделов главной страницы")
-    @Tag("smoke")
+    @Tag("regression")
     @Owner("PuchkanevRostislav")
     void HomePageTest() {
         page.openHome()
@@ -64,7 +64,7 @@ public class ReStoreTests extends TestBase {
 
     @Test
     @DisplayName("Проверка оформления товара")
-    @Tag("smoke")
+    @Tag("regression")
     @Owner("PuchkanevRostislav")
     void makingAnOrder() {
         page.openHome()
@@ -87,7 +87,7 @@ public class ReStoreTests extends TestBase {
 
     @Test
     @DisplayName("Тест добавления товара в избранное")
-    @Tag("smoke")
+    @Tag("regression")
     @Owner("PuchkanevRostislav")
     void addToFavoritesTest() {
         String productName = "Apple iPhone 17 Pro Max 1TB, Silver";
