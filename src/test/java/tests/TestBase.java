@@ -16,6 +16,9 @@ public class TestBase {
         Configuration.browserSize = "1920x1080";
         Configuration.timeout = 10_000;
         Configuration.pageLoadStrategy = "eager";
+        String remote = System.getProperty("selenide.remote");
+        if (remote != null && !remote.isBlank()) {
+            Configuration.remote = remote;
     }
 
     @BeforeEach
