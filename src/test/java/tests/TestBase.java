@@ -1,12 +1,14 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import helpers.Attach;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
-import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.BeforeEach;
-import helpers.Attach;
+
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 public class TestBase {
 
@@ -16,9 +18,12 @@ public class TestBase {
         Configuration.browserSize = "1920x1080";
         Configuration.timeout = 10_000;
         Configuration.pageLoadStrategy = "eager";
+
+        // В CI лучше прокидывать через -Dselenide.remote=...
         String remote = System.getProperty("selenide.remote");
         if (remote != null && !remote.isBlank()) {
             Configuration.remote = remote;
+        }
     }
 
     @BeforeEach
@@ -37,5 +42,7 @@ public class TestBase {
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
+
+        closeWebDriver();
     }
 }
