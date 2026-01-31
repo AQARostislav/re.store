@@ -31,6 +31,20 @@ dependencies {
     testImplementation 'org.slf4j:slf4j-simple:2.0.16'
 }
 
-test {
-    useJUnitPlatform()
+tasks.withType(Test) {
+    useJUnitPlatform() // Указание использовать JUnit Platform для запуска тестов
+
+    testLogging {
+        lifecycle {
+            events "started", "skipped", "failed", "standard_error", "standard_out"
+// Конфигурация логирования тестов: какие события логировать
+            exceptionFormat "short" // Форматирование исключений в коротком виде
+        }
+    }
 }
+tasks.register("regression_test", Test) {
+    useJUnitPlatform {
+        includeTags("regression")
+    }
+}
+
