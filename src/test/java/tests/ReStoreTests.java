@@ -77,7 +77,6 @@ public class ReStoreTests extends TestBase {
                 .openCartFromHeader()
                 // В корзине видим товар
                 .cartShouldContain("(?s).*iPhone 17 Pro Max 1TB.*Silver.*")
-
                 // Нажимаем "Перейти к оформлению"
                 .clickGoToCheckout()
                 // Попали на страницу оформления
@@ -90,7 +89,6 @@ public class ReStoreTests extends TestBase {
     @Owner("PuchkanevRostislav")
     void addToFavoritesTest() {
         String productName = "Apple iPhone 17 Pro Max 1TB, Silver";
-
         page.openSearchByProductName(productName) // open("/search/?q=...")
                 // На странице поиска находим карточку нужного товара и кликаем в неё
                 .openProductCardFromSearchByRegex("(?s).*Apple iPhone 17 Pro Max 1TB.*Silver.*")
