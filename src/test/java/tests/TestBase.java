@@ -19,12 +19,13 @@ public class TestBase {
         Configuration.timeout = 10_000;
         Configuration.pageLoadStrategy = "eager";
 
+        Configuration.browser = "chrome";
+
         String remote = System.getProperty("selenide.remote");
         if (remote != null && !remote.isBlank()) {
             Configuration.remote = remote;
-            Configuration.headless =
-                    Boolean.parseBoolean(System.getProperty("selenide.headless", "false"));
         }
+        Configuration.headless = Boolean.parseBoolean(System.getProperty("selenide.headless", "false"));
     }
 
     @BeforeEach
