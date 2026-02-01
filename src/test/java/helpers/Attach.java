@@ -34,18 +34,4 @@ public class Attach {
                 String.join("\n", Selenide.getWebDriverLogs(BROWSER)));
     }
 
-    @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
-    public static String addVideo() {
-        String remote = System.getProperty("selenide.remote");
-        String sid = sessionId() == null ? "" : sessionId().toString();
-
-        if (remote == null || remote.isBlank() || sid == null || sid.isBlank()) {
-            return "<html><body><p><b>Video:</b> not available (no remote session)</p></body></html>";
-        }
-
-        String videoUrl = "https://selenoid.autotests.cloud/video/" + sid + ".mp4";
-        return "<html><body><video width='100%' height='100%' controls autoplay>" +
-                "<source src='" + videoUrl + "' type='video/mp4'>" +
-                "</video></body></html>";
-    }
 }
