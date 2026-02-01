@@ -46,7 +46,6 @@ tasks.register("regression_test", Test) {
     useJUnitPlatform {
         includeTags("regression")
     }
-    // обязательно, чтобы Gradle видел тесты
     testClassesDirs = sourceSets.test.output.classesDirs
     classpath = sourceSets.test.runtimeClasspath
     // чтобы тесты точно компилились перед запуском
