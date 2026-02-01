@@ -7,9 +7,6 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.remote.DesiredCapabilities;
-
-import java.util.Map;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
@@ -18,21 +15,11 @@ public class TestBase {
     @BeforeAll
     static void beforeAll() {
         Configuration.baseUrl = "https://re-store.ru";
-        Configuration.browser = "chrome";
         Configuration.browserSize = "1920x1080";
-        Configuration.timeout = 10000;
+        Configuration.timeout = 10_000;
+        Configuration.pageLoadStrategy = "eager";
 
-        String remote = System.getProperty("selenide.remote");
-        if (remote != null && !remote.isBlank()) {
-            Configuration.remote = remote;
-
-            DesiredCapabilities caps = new DesiredCapabilities();
-            caps.setCapability("selenoid:options", Map.of(
-                    "enableVNC", true,
-                    "enableVideo", false
-            ));
-            Configuration.browserCapabilities = caps;
-        }
+        Configuration.browser = "chrome";
     }
 
     @BeforeEach

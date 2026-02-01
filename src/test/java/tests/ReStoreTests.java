@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import pages.ReStorePage;
 
-@Tag("regression")
 public class ReStoreTests extends TestBase {
 
     private final ReStorePage page = new ReStorePage();
