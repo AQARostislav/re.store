@@ -37,7 +37,7 @@ public class Attach {
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
     public static String addVideo() {
         String remote = System.getProperty("selenide.remote");
-        String sid = sessionId();
+        String sid = sessionId() == null ? "" : sessionId().toString();
 
         if (remote == null || remote.isBlank() || sid == null || sid.isBlank()) {
             return "<html><body><p><b>Video:</b> not available (no remote session)</p></body></html>";
