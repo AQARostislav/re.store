@@ -19,10 +19,11 @@ public class TestBase {
         Configuration.timeout = 10_000;
         Configuration.pageLoadStrategy = "eager";
 
-        // В CI лучше прокидывать через -Dselenide.remote=...
         String remote = System.getProperty("selenide.remote");
         if (remote != null && !remote.isBlank()) {
             Configuration.remote = remote;
+            Configuration.headless =
+                    Boolean.parseBoolean(System.getProperty("selenide.headless", "false"));
         }
     }
 
