@@ -5,7 +5,6 @@ import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
@@ -17,15 +16,12 @@ public class Attach {
 
     @Attachment(value = "{attachName}", type = "image/png")
     public static byte[] screenshotAs(String attachName) {
-        return ((TakesScreenshot) getWebDriver())
-                .getScreenshotAs(OutputType.BYTES);
+        return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
     }
 
     @Attachment(value = "Page source", type = "text/plain")
     public static byte[] pageSource() {
-        return getWebDriver()
-                .getPageSource()
-                .getBytes(StandardCharsets.UTF_8);
+        return getWebDriver().getPageSource().getBytes(StandardCharsets.UTF_8);
     }
 
     @Attachment(value = "{attachName}", type = "text/plain")
@@ -34,26 +30,22 @@ public class Attach {
     }
 
     public static void browserConsoleLogs() {
-        attachAsText(
-                "Browser console logs",
-                String.join("\n", Selenide.getWebDriverLogs(BROWSER))
-        );
+        attachAsText("Browser console logs",
+                String.join("\n", Selenide.getWebDriverLogs(BROWSER)));
     }
 
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
     public static String addVideo() {
-        return "<html><body><video width='100%' height='100%' controls autoplay>" +
-                "<source src='" + getVideoUrl() + "' type='video/mp4'>" +
-                "</video></body></html>";
-    }
+        String remote = System.getProperty("selenide.remote");
+        String sid = sessionId();
 
-    public static URL getVideoUrl() {
-        String videoUrl = "https://selenoid.autotests.cloud/video/" + sessionId() + ".mp4";
-
-        try {
-            return new URL(videoUrl);
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
+        if (remote == null || remote.isBlank() || sid == null || sid.isBlank()) {
+            return "<html><body><p><b>Video:</b> not available (no remote session)</p></body></html>";
         }
+
+        String videoUrl = "https://selenoid.autotests.cloud/video/" + sid + ".mp4";
+        return "<html><body><video width='100%' height='100%' controls autoplay>" +
+                "<source src='" + videoUrl + "' type='video/mp4'>" +
+                "</video></body></html>";
     }
 }
