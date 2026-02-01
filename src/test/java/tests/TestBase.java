@@ -29,7 +29,7 @@ public class TestBase {
             DesiredCapabilities caps = new DesiredCapabilities();
             caps.setCapability("selenoid:options", Map.of(
                     "enableVNC", true,
-                    "enableVideo", true
+                    "enableVideo", false
             ));
             Configuration.browserCapabilities = caps;
         }
