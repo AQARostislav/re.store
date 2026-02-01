@@ -48,11 +48,16 @@ tasks.register("regression_test", Test) {
     }
     testClassesDirs = sourceSets.test.output.classesDirs
     classpath = sourceSets.test.runtimeClasspath
-    // чтобы тесты точно компилились перед запуском
     dependsOn testClasses
-    // (опционально) лог выводить нормальный
+
+    systemProperty "selenide.remote", System.getProperty("selenide.remote")
+    systemProperty "selenide.headless", System.getProperty("selenide.headless")
+    systemProperty "selenide.browser", System.getProperty("selenide.browser")
+
     testLogging {
         events "passed", "skipped", "failed"
+        exceptionFormat "full"
+        showStandardStreams true
     }
 }
 
