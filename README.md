@@ -32,11 +32,11 @@ re:Store — официальный ритейлер техники Apple в Р�
   <img src="images/icons/junit5.png" width="50"/>
   <img src="images/icons/gradle.png" width="50"/>
   <img src="images/icons/selenide.png" width="50"/>
-  <img src="images/icons/selenoid.png" width="50"/>
+  <img src="images/icons/selenoid.png" width="70"/>
   <img src="images/icons/allure.png" width="50"/>
   <img src="images/icons/jenkins.png" width="50"/>
   <img src="images/icons/telegram.png" width="50"/>
-  <img src="images/icons/jira.png" width="60"/>
+  <img src="images/icons/jira.png" width="70"/>
 </p>
 	•	Java — язык программирования
 	•	JUnit 5 — тестовый фреймворк
