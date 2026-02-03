@@ -1,5 +1,5 @@
 <h1>
-  <img src="images/icons/restore.jpeg" width="28" style="vertical-align: middle;" />
+  <img src="images/icons/restore.jpeg" width="50" style="vertical-align: middle;" />
   Проект по автоматизации тестирования сайта re:Store
 </h1>
 ⸻
