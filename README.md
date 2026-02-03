@@ -1,6 +1,6 @@
 <h1 style="display: flex; align-items: center; justify-content: space-between;">
   <span>Проект по автоматизации тестирования сайта </span>
-  <img src="images/icons/restore.jpeg" height="36" />
+  <img src="images/icons/restore.jpeg" width="50"/>
 </h1>
 
 re:Store — официальный ритейлер техники Apple в России.
