@@ -13,48 +13,51 @@ import static com.codeborne.selenide.WebDriverConditions.urlContaining;
 
 public class ReStorePage {
 
-    private final SelenideElement header = $("header");
-    private final SelenideElement headerLogo = $("a.header-logo__link-full");
-    private final SelenideElement regionButton = $("header button.location");
-    private final SelenideElement headerServices = $(".header-services");
-    private final SelenideElement bonusMenu = $(".bonus-menu");
-    private final SelenideElement headerIcons = $(".header-icons");
-    private final SelenideElement favoritesIcon = $("a.header-icons__link[href='/favorites/']");
-    private final SelenideElement compareIcon = $("a.header-icons__link[href='/compare/']");
-    private final SelenideElement cartIcon = $("a.header-icons__link[href='/order/cart/']");
-    private final SelenideElement lkIcon = $(".header-icons__lk");
-    private final SelenideElement headerMenu = $(".header-menu");
-    private final SelenideElement servicesLink = $("a.header-services");
-    private final ElementsCollection dialogs = $$("div, section, dialog");
-    private final SelenideElement cookieBanner = $(".cookie-agreement");
-    private final SelenideElement cookieAcceptButton = $(".cookie-agreement button.btn--black");
-    private final SelenideElement mainBanner = $(".main-banner");
-    private final ElementsCollection mainBannerLinks = $$("a.main-banner__link-full");
-    private final ElementsCollection swiperSlides = $$(".swiper-slide");
-    private final SelenideElement bestSellers = $("#gf-recs-gf-reco-1");
-    private final ElementsCollection giftCardLinks = $$("a[href='/gift/']");
-    private final SelenideElement categoriesSection = $("section.section-categories");
-    private final SelenideElement brandsSection = $("section.section-brands");
-    private final SelenideElement brandsSlider = $("section.section-brands .brands__slider");
-    private final ElementsCollection brandSlides = $("section.section-brands .swiper-wrapper").$$(".brands__slide");
-    private final ElementsCollection brandImages = $("section.section-brands .swiper-wrapper").$$("img");
-    private final SelenideElement sectionBanners = $(".section-banners");
-    private final ElementsCollection bannerCustomization = $$(".section-banners a[href='/promo/customization/']");
-    private final ElementsCollection bannerServiceCards = $$(".section-banners a[href='/promo/service-cards/']");
-    private final SelenideElement allNewsBanner = $("a[href='/allnews/']");
-    private final SelenideElement appLinksBanner = $("a[href='/applinks/']");
-    private final ElementsCollection sampleSections = $$("section.sample-section");
-    private final SelenideElement bottomBanners = $("div.section-banners.section-banners-bottom");
-    private final ElementsCollection promoCards = bottomBanners.$$(".promo-card");
-    private final ElementsCollection promoCardLinks = bottomBanners.$$("a.promo-card__link[href]");
-    private final SelenideElement restoreUBannerLink = bottomBanners.$("a.promo-card__link[href*='/promo/restore-u/']");
-    private final SelenideElement liveBannerLink = bottomBanners.$("a.promo-card__link[href*='/live/']");
-    private final SelenideElement searchLine = $(".search-line");
-    private final ElementsCollection productLinks = $$("a.product-card__link");
-    private final ElementsCollection anyButtonsOrLinks = $$("button, a");
-    private final SelenideElement favoriteButtonOnCard = $("button.favorite__button");
-    private final SelenideElement cartLayout = $(".page-cart-layout");
-    private final SelenideElement cartButton = $("#cartButton");
+    private final SelenideElement
+            header = $("header"),
+            headerLogo = $("a.header-logo__link-full"),
+            regionButton = $("header button.location"),
+            headerServices = $(".header-services"),
+            bonusMenu = $(".bonus-menu"),
+            headerIcons = $(".header-icons"),
+            favoritesIcon = $("a.header-icons__link[href='/favorites/']"),
+            compareIcon = $("a.header-icons__link[href='/compare/']"),
+            cartIcon = $("a.header-icons__link[href='/order/cart/']"),
+            lkIcon = $(".header-icons__lk"),
+            headerMenu = $(".header-menu"),
+            servicesLink = $("a.header-services"),
+            cookieBanner = $(".cookie-agreement"),
+            cookieAcceptButton = $(".cookie-agreement button.btn--black"),
+            mainBanner = $(".main-banner"),
+            bestSellers = $("#gf-recs-gf-reco-1"),
+            categoriesSection = $("section.section-categories"),
+            brandsSection = $("section.section-brands"),
+            brandsSlider = $("section.section-brands .brands__slider"),
+            sectionBanners = $(".section-banners"),
+            allNewsBanner = $("a[href='/allnews/']"),
+            appLinksBanner = $("a[href='/applinks/']"),
+            bottomBanners = $("div.section-banners.section-banners-bottom"),
+            restoreUBannerLink = bottomBanners.$("a.promo-card__link[href*='/promo/restore-u/']"),
+            liveBannerLink = bottomBanners.$("a.promo-card__link[href*='/live/']"),
+            searchLine = $(".search-line"),
+            favoriteButtonOnCard = $("button.favorite__button"),
+            cartLayout = $(".page-cart-layout"),
+            cartButton = $("#cartButton");
+
+    private final ElementsCollection
+            dialogs = $$("div, section, dialog"),
+            mainBannerLinks = $$("a.main-banner__link-full"),
+            swiperSlides = $$(".swiper-slide"),
+            giftCardLinks = $$("a[href='/gift/']"),
+            brandSlides = $("section.section-brands .swiper-wrapper").$$(".brands__slide"),
+            brandImages = $("section.section-brands .swiper-wrapper").$$("img"),
+            bannerCustomization = $$(".section-banners a[href='/promo/customization/']"),
+            bannerServiceCards = $$(".section-banners a[href='/promo/service-cards/']"),
+            sampleSections = $$("section.sample-section"),
+            promoCards = bottomBanners.$$(".promo-card"),
+            promoCardLinks = bottomBanners.$$("a.promo-card__link[href]"),
+            productLinks = $$("a.product-card__link"),
+            anyButtonsOrLinks = $$("button, a");
 
     @Step("Открыть главную страницу")
     public ReStorePage openHome() {
