@@ -22,13 +22,13 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.13.4')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-    testImplementation 'com.codeborne:selenide:7.14.0'
-    testImplementation "io.qameta.allure:allure-junit5:2.29.0"
-    testImplementation "io.qameta.allure:allure-selenide:2.29.0"
-    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-    testImplementation 'org.slf4j:slf4j-simple:2.0.16'
+    testImplementation ('org.junit:junit-bom:5.13.4',
+                        'org.junit.jupiter:junit-jupiter',
+                        'com.codeborne:selenide:7.14.0',
+                        "io.qameta.allure:allure-junit5:2.29.0",
+                        "io.qameta.allure:allure-selenide:2.29.0",
+                        'org.slf4j:slf4j-simple:2.0.16')
+    testRuntimeOnly     'org.junit.platform:junit-platform-launcher'
 }
 
 tasks.withType(Test).configureEach {
