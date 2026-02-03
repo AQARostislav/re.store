@@ -23,18 +23,17 @@ re:Store — официальный ритейлер техники Apple в Р�
 
 Стек технологий
 <p align="center">
-
-<a href="https://www.jetbrains.com/idea/"><img src="images/icons/intellij.png" width="50" height="50"  alt="intellij"/></a> 
-  <img src="images/icons/java.png" width="50"/>
-  <img src="images/icons/github.png" width="50"/>
-  <img src="images/icons/junit5.png" width="50"/>
-  <img src="images/icons/gradle.png" width="50"/>
-  <img src="images/icons/selenide.png" width="50"/>
-  <img src="images/icons/selenoid.png" width="70"/>
-  <img src="images/icons/allure.png" width="50"/>
-  <img src="images/icons/jenkins.png" width="50"/>
-  <img src="images/icons/telegram.png" width="50"/>
-  <img src="images/icons/jira.png" width="70"/>
+<a href="https://www.jetbrains.com/idea/"><img src="images/icons/intellij.png" width="50" height="50"  alt="intellij"/></a>
+<a href="https://www.java.com/"><img src="images/icons/java.png" width="50" height="50"  alt="Java"/></a>
+<a href="https://github.com/"><img src="images/icons/github.png" width="50" height="50"  alt="Github"/></a>
+<a href="https://junit.org/junit5/"><img src="images/icons/junit5.png" width="50" height="50"  alt="JUnit 5"/></a>
+<a href="https://gradle.org/"><img src="images/icons/gradle.png" width="50" height="50"  alt="Gradle"/></a>
+<a href="https://selenide.org/"><img src="images/icons/selenide.png" width="50" height="50"  alt="Selenide"/></a>
+<a href="https://aerokube.com/selenoid/"><img src="images/icons/selenoid.png" width="50" height="50"  alt="Selenoid"/></a>
+<a href="https://github.com/allure-framework/allure2"><img src="images/icons/allure.png" width="50" height="50"  alt="Allure"/></a>
+<a href="https://www.jenkins.io/"><img src="images/icons/jenkins.png" width="50" height="50"  alt="Jenkins"/></a>
+<a href="https://web.telegram.org/"><img src="images/icons/telegram.png" width="50" height="50"  alt="IDEA"/></a>
+<a href="https://www.atlassian.com/ru/software/jira/"><img src="images/icons/jira.png" width="50" height="50"  alt="Jira"/></a>  
 </p>
 	•	Java — язык программирования
 	•	JUnit 5 — тестовый фреймворк
