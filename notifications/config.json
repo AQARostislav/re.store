@@ -1,0 +1,16 @@
+{
+  "base": {
+    "project": "re.store",
+    "environment": "AQARostislav",
+    "comment": "Tag @aqarostislav",
+    "reportLink": "http://localhost:8080/job/re.store/",
+    "language": "ru",
+    "allureFolder": "/Users/rostislavpuckanev/Desktop/AQA/TEST QA JAVA/re.store/build/reports/allure-report/allureReport",
+    "enableChart": true
+  },
+  "telegram": {
+    "token": "8504758282:AAHF5CHSoD1C7LS5rAc6RhomaYqEBkP9duY",
+    "chat": "689528568",
+    "replyTo": ""
+  }
+}

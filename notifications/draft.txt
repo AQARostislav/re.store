@@ -1,0 +1,12 @@
+8504758282:AAHF5CHSoD1C7LS5rAc6RhomaYqEBkP9duY
+
+https://api.telegram.org/bot8504758282:AAHF5CHSoD1C7LS5rAc6RhomaYqEBkP9duY/getUpdates
+
+689528568
+
+curl -X POST \
+     -H 'Content-Type: application/json' \
+     -d '{"chat_id": "689528568", "text": "Hello World!", "disable_notification": true}' \
+     https://api.telegram.org/bot8504758282:AAHF5CHSoD1C7LS5rAc6RhomaYqEBkP9duY/sendMessage
+
+java "-DconfigFile=notifications/config.json" -jar ./notifications/allure-notifications-4.11.0.jar
