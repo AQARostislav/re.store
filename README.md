@@ -26,17 +26,17 @@ re:Store — официальный ритейлер техники Apple в Р�
 Стек технологий
 ⸻
 <p align="center">
-  <img src="images/icons/intellij.png" width="50"/>
-  <img src="images/icons/java.png" width="50"/>
-  <img src="images/icons/github.png" width="50"/>
-  <img src="images/icons/junit5.png" width="50"/>
-  <img src="images/icons/gradle.png" width="50"/>
-  <img src="images/icons/selenide.png" width="50"/>
-  <img src="images/icons/selenoid.png" width="50"/>
-  <img src="images/icons/allure.png" width="50"/>
-  <img src="images/icons/jenkins.png" width="50"/>
-  <img src="images/icons/telegram.png" width="50"/>
-  <img src="images/icons/jira.png" width="50"/>
+  <img src="images/icons/intellij.png" height="32"/>
+  <img src="images/icons/java.png" height="32"/>
+  <img src="images/icons/github.png" height="32"/>
+  <img src="images/icons/junit5.png" height="32"/>
+  <img src="images/icons/gradle.png" height="32"/>
+  <img src="images/icons/selenide.png" height="32"/>
+  <img src="images/icons/selenoid.png" height="32"/>
+  <img src="images/icons/allure.png" height="32"/>
+  <img src="images/icons/jenkins.png" height="32"/>
+  <img src="images/icons/telegram.png" height="32"/>
+  <img src="images/icons/jira.png" height="32"/>
 </p>
 	•	Java — язык программирования
 	•	JUnit 5 — тестовый фреймворк
