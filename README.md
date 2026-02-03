@@ -23,7 +23,8 @@ re:Store — официальный ритейлер техники Apple в Р�
 
 Стек технологий
 <p align="center">
-  <img src="images/icons/intellij.png" width="50"/>
+
+<a href="https://www.jetbrains.com/idea/"><img src="images/icons/intellij.png" width="50" height="50"  alt="intellij"/></a> 
   <img src="images/icons/java.png" width="50"/>
   <img src="images/icons/github.png" width="50"/>
   <img src="images/icons/junit5.png" width="50"/>
